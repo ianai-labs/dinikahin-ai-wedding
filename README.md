@@ -1,36 +1,67 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# dinikahin.com
 
-## Getting Started
+**AI Wedding Consultant** — Wujudkan pernikahan impian dengan bantuan AI.
 
-First, run the development server:
+Platform konsultasi pernikahan berbasis AI pertama di Indonesia. Chat dengan **Dini**, AI Wedding Consultant kami, dan dapatkan rekomendasi venue terbaik yang sesuai dengan budget, lokasi, dan gaya pernikahanmu — gratis, personal, dan selalu siap 24/7.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ✨ Mengapa dinikahin.com?
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Calon pengantin di Indonesia harus mencari harga, kapasitas, dan paket dari puluhan sumber terpisah. **dinikahin.com** hadir untuk menyederhanakan proses ini.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Konsultasi AI** — Ngobrol santai dengan Dini seperti curhat ke wedding planner sungguhan
+- **Rekomendasi Cerdas** — AI mencocokkan kebutuhanmu dengan 183+ venue di Jabodetabek
+- **Bandingkan Pilihan** — Lihat perbandingan harga, kapasitas, dan skor kecocokan
+- **Langsung Terhubung** — Submit form dan Wedding Organizer partner kami akan menghubungimu
 
-## Learn More
+Semua gratis. Tanpa biaya tersembunyi. Tanpa komitmen.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🤝 Berkolaborasi dengan MayWedding
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+dinikahin.com bekerja sama dengan **MayWedding** — wedding planner profesional yang dipimpin oleh Kak May. Setelah Dini memahami kebutuhanmu, Kak May dan tim yang akan mendampingi proses selanjutnya: nego harga, survey venue, sampai booking.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🎨 Brand Identity
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+| Element | Value |
+|---------|-------|
+| **Brand** | dinikahin.com |
+| **AI Character** | Dini — AI Wedding Consultant |
+| **Personality** | Hangat, suportif, seperti kakak perempuan yang berpengalaman |
+| **Primary Color** | `#C9A84C` Gold |
+| **Typography** | Playfair Display (headings) + Inter (body) |
+
+[Dokumentasi Desain Lengkap →](doc/design-dinikahin.md)
+
+---
+
+## 🚀 Cara Kerja
+
+1. **Chat dengan Dini** — Ceritakan rencana pernikahan impianmu
+2. **Dapatkan Rekomendasi** — AI mencocokkan dengan database 183+ venue
+3. **Bandingkan Pilihan** — Lihat side-by-side: harga, kapasitas, skor kecocokan
+4. **Hubungi WO Partner** — Isi form dan tim MayWedding akan menghubungimu via WhatsApp
+
+---
+
+## 📊 MVP Scope
+
+Lihat [PRD (Product Requirements Document) →](doc/PRD_AI_Wedding_Consultant.md)
+
+- AI Chat Consultation (DeepSeek-powered)
+- Requirement extraction (budget, lokasi, tamu, gaya)
+- Venue recommendation engine (scoring 5 faktor)
+- Venue comparison table
+- Lead capture → WhatsApp CTA
+- 183+ venue Jabodetabek dengan gambar
+
+---
+
+<p align="center">
+  Made with ❤️ for Indonesian couples<br>
+  © 2026 dinikahin.com — AI Wedding Consultant
+</p>

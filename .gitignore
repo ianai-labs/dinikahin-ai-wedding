@@ -39,3 +39,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# data (venue images handled via public/)
+data/venue-images/
+
+# zone identifiers (Windows WSL)
+*:Zone.Identifier
