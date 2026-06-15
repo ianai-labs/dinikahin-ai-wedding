@@ -28,11 +28,14 @@ export async function POST(req: NextRequest) {
       // Offline mode — return generated ID
     }
 
-    // Build WhatsApp template with actual data
+    // Strip markdown formatting from summary
+    const cleanSummary = (summary || "-").replace(/\*\*/g, "").replace(/\*/g, "");
+
+    // Build WhatsApp message — include AI-generated summary
     const waMessage = encodeURIComponent(
-      `Halo, saya ${name} dari dinikahin.com.\n` +
-        `Saya sedang mencari venue untuk pernikahan.\n` +
-        (venueInterest ? `Tertarik dengan: ${venueInterest}\n` : "") +
+      `Halo, saya ${name} dari dinikahin.com.\n\n` +
+        `Berikut ringkasan preferensi saya:\n${cleanSummary}\n\n` +
+        (venueInterest ? `Tertarik dengan: ${venueInterest}\n\n` : "") +
         `Bisa dibantu info selengkapnya?`
     );
 

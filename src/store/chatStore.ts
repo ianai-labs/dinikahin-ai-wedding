@@ -13,6 +13,7 @@ interface ChatState {
   completenessScore: number;
   extractedRequirements: ExtractedRequirements | null;
   phase: ChatPhase;
+  generatedSummary: string | null;
   error: string | null;
 
   setConversationId: (id: string) => void;
@@ -23,6 +24,7 @@ interface ChatState {
   setCompletenessScore: (score: number) => void;
   setExtractedRequirements: (req: ExtractedRequirements | null) => void;
   setPhase: (phase: ChatPhase) => void;
+  setGeneratedSummary: (summary: string | null) => void;
   setError: (error: string | null) => void;
   reset: () => void;
 }
@@ -36,6 +38,7 @@ export const useChatStore = create<ChatState>()(
       completenessScore: 0,
       extractedRequirements: null,
       phase: "gathering",
+      generatedSummary: null,
       error: null,
 
       setConversationId: (id) => set({ conversationId: id }),
@@ -66,6 +69,8 @@ export const useChatStore = create<ChatState>()(
 
       setPhase: (phase) => set({ phase }),
 
+      setGeneratedSummary: (summary) => set({ generatedSummary: summary }),
+
       setError: (error) => set({ error }),
 
       reset: () =>
@@ -76,6 +81,7 @@ export const useChatStore = create<ChatState>()(
           completenessScore: 0,
           extractedRequirements: null,
           phase: "gathering",
+          generatedSummary: null,
           error: null,
         }),
     }),

@@ -46,7 +46,7 @@ export default function ChatPage() {
     conversationId, messages, isStreaming, phase,
     setConversationId, addMessage, updateLastAssistantMessage,
     setIsStreaming, setCompletenessScore, setExtractedRequirements,
-    setPhase, setError, reset: resetChat,
+    setPhase, setGeneratedSummary, setError, reset: resetChat,
   } = useChatStore();
   const { setRecommendedVenues, reset: resetRecs } = useRecommendationStore();
 
@@ -126,9 +126,11 @@ Cerita aja, santai ya. Aku siap bantu!`,
                   setCompletenessScore((data.completenessScore as number) || 0);
                   setPhase(((data.phase as string) || "gathering") as ChatPhase);
                 }
+                if (data.generatedSummary) {
+                  setGeneratedSummary(data.generatedSummary as string);
+                }
                 if (Array.isArray(data.recommendations) && data.recommendations.length > 0) {
                   setRecommendedVenues(data.recommendations.map(mapVenueFromApi));
-                  toast.success("Rekomendasi venue sudah siap! ✨");
                 }
               }
             );

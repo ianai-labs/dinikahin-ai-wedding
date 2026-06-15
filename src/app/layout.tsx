@@ -20,6 +20,10 @@ export const metadata: Metadata = {
     default: "dinikahin.com — AI Wedding Consultant",
     template: "%s | dinikahin.com",
   },
+  icons: {
+    icon: "/favicon.png",
+    apple: "/favicon.png",
+  },
   description:
     "Konsultasi pernikahan berbasis AI untuk calon pengantin di Indonesia. Chat dengan Dini, AI Wedding Consultant kami, dan wujudkan pernikahan impianmu dengan rekomendasi yang terpersonalisasi.",
   keywords: [

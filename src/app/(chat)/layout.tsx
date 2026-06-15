@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { MessageCircle, LayoutGrid, Phone, Menu, X } from "lucide-react";
+import { MessageCircle, LayoutGrid, FileText, Phone, Menu, X } from "lucide-react";
 import { ChatSidebar } from "@/components/chat/ChatSidebar";
 
 export default function ChatLayout({ children }: { children: React.ReactNode }) {
@@ -11,6 +11,7 @@ export default function ChatLayout({ children }: { children: React.ReactNode }) 
   const navItems = [
     { href: "/chat", label: "Chat", icon: MessageCircle },
     { href: "/compare", label: "Bandingkan", icon: LayoutGrid },
+    { href: "/summary", label: "Ringkasan", icon: FileText },
     { href: "/lead", label: "Hubungi WO Partner", icon: Phone },
   ];
 

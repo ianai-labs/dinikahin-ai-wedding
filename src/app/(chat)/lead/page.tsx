@@ -64,7 +64,7 @@ export default function LeadPage() {
           email: form.email || undefined,
           conversationId: useChatStore.getState().conversationId,
           recommendationId: useRecommendationStore.getState().recommendationId,
-          summary: useRecommendationStore.getState().generatedSummary,
+          summary: useChatStore.getState().generatedSummary,
           venueInterest: topVenue?.venue?.venueName,
         }),
       });
@@ -91,7 +91,7 @@ export default function LeadPage() {
             <Check className="h-8 w-8 text-green-600" />
           </div>
           <h1 className="font-heading text-2xl font-bold mb-3">Terima Kasih! 🎉</h1>
-          <p className="text-muted-foreground mb-6">Partner kami akan menghubungi kamu segera.</p>
+          <p className="text-muted-foreground mb-6">Chat WhatsApp partner sekarang untuk lanjut ke tahap berikutnya.</p>
 
           {topVenue && (
             <div className="bg-white border border-border rounded-xl p-4 mb-6 text-left">

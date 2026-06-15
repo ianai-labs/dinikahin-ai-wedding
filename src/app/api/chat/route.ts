@@ -130,11 +130,12 @@ async function handleDeepSeekStream(
             );
           }
 
-          // Post-stream: extraction + venue recommendations
+          // Post-stream: extraction + venue recommendations + summary
           let extraction = null;
           let completenessScore = 0;
           let phase: string = "gathering";
           let recommendations: any[] = [];
+          let generatedSummary: string | null = null;
 
           // 1. Extract requirements
           try {
@@ -178,6 +179,30 @@ async function handleDeepSeekStream(
             console.error("Recommendation extraction error:", err);
           }
 
+          // 3. Generate summary of customer preferences
+          try {
+            const summaryPrompt = `Berdasarkan percakapan wedding consultation ini, buat ringkasan preferensi pelanggan yang akan dikirim ke Wedding Organizer partner.
+
+Sertakan sedetail mungkin:
+- Nama panggilan & pasangan (jika disebutkan)
+- Budget range
+- Lokasi area/kota yang diinginkan
+- Jumlah tamu
+- Tipe venue, setting (indoor/outdoor), gaya
+- Tanggal atau bulan rencana pernikahan (jika ada)
+- Preferensi budaya/adat (jika ada)
+- Kebutuhan khusus atau catatan tambahan
+
+Format: singkat, terstruktur, profesional. Bahasa Indonesia. Maksimal 300 kata. Langsung ke isi, tanpa preamble.`;
+            const summaryMessages = [
+              { role: "system" as const, content: summaryPrompt },
+              ...chatMessages.filter((m) => m.role !== "system"),
+              { role: "user" as const, content: "Buat ringkasan preferensi pelanggan dari percakapan di atas." },
+            ];
+            const summaryRaw = await deepSeekComplete(summaryMessages, { temperature: 0.3, maxTokens: 400 });
+            if (summaryRaw?.trim()) generatedSummary = summaryRaw.trim();
+          } catch {}
+
           controller.enqueue(
             new TextEncoder().encode(
               `data: ${JSON.stringify({
@@ -186,6 +211,7 @@ async function handleDeepSeekStream(
                 completenessScore,
                 phase,
                 recommendations,
+                generatedSummary,
               })}\n\n`
             )
           );
