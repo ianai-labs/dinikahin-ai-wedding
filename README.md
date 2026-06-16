@@ -1,4 +1,5 @@
-# dinikahin.com
+# [dinikahin — AI Wedding Consultant](https://dinikahin-ai-wedding.vercel.app/)
+
 
 **AI Wedding Consultant** — Wujudkan pernikahan impian dengan bantuan AI.
 
@@ -6,9 +7,9 @@ Platform konsultasi pernikahan berbasis AI pertama di Indonesia. Chat dengan **D
 
 ---
 
-## ✨ Mengapa dinikahin.com?
+## ✨ Mengapa dinikahin?
 
-Calon pengantin di Indonesia harus mencari harga, kapasitas, dan paket dari puluhan sumber terpisah. **dinikahin.com** hadir untuk menyederhanakan proses ini.
+Calon pengantin di Indonesia harus mencari harga, kapasitas, dan paket dari puluhan sumber terpisah. **dinikahin** hadir untuk menyederhanakan proses ini.
 
 - **Konsultasi AI** — Ngobrol santai dengan Dini seperti curhat ke wedding planner sungguhan
 - **Rekomendasi Cerdas** — AI mencocokkan kebutuhanmu dengan 183+ venue di Jabodetabek
@@ -21,7 +22,7 @@ Semua gratis. Tanpa biaya tersembunyi. Tanpa komitmen.
 
 ## 🤝 Berkolaborasi dengan MayWedding
 
-dinikahin.com bekerja sama dengan **MayWedding** — wedding planner profesional yang dipimpin oleh Kak May. Setelah Dini memahami kebutuhanmu, Kak May dan tim yang akan mendampingi proses selanjutnya: nego harga, survey venue, sampai booking.
+dinikahin bekerja sama dengan **MayWedding** — wedding planner profesional yang dipimpin oleh Kak May. Setelah Dini memahami kebutuhanmu, Kak May dan tim yang akan mendampingi proses selanjutnya: nego harga, survey venue, sampai booking.
 
 ---
 
@@ -29,7 +30,7 @@ dinikahin.com bekerja sama dengan **MayWedding** — wedding planner profesional
 
 | Element | Value |
 |---------|-------|
-| **Brand** | dinikahin.com |
+| **Brand** | dinikahin |
 | **AI Character** | Dini — AI Wedding Consultant |
 | **Personality** | Hangat, suportif, seperti kakak perempuan yang berpengalaman |
 | **Primary Color** | `#C9A84C` Gold |
@@ -63,5 +64,5 @@ Lihat [PRD (Product Requirements Document) →](doc/PRD_AI_Wedding_Consultant.md
 
 <p align="center">
   Made with ❤️ for Indonesian couples<br>
-  © 2026 dinikahin.com — AI Wedding Consultant
+  © 2026 dinikahin — AI Wedding Consultant
 </p>
