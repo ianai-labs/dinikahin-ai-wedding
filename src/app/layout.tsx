@@ -46,6 +46,9 @@ export const metadata: Metadata = {
     siteName: "dinikahin.com",
   },
   metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000"),
+  other: {
+    "dicoding:email": "imam.nurfalah89@gmail.com",
+  },
 };
 
 export default function RootLayout({
